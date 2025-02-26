@@ -72,7 +72,30 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
     -Terser Plugin
 ## npm install terser-webpack-plugin --save-dev
 -is used to removed the unneccesary code in production build
+const TerserPlugin = require("terser-webpack-plugin");
+
+ optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        test: /\.js(\?.*)?$/i,
+      }),
+    ],
+  },
+
+
     -Mini Css extract Plugin
+## npm install --save-dev mini-css-extract-plugin
+    const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+     plugins: [new MiniCssExtractPlugin()],
+      rules: [
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+    ],
+
+    
     -Define Plugin
 
 =>OPTIMIZATION- SPLIT CHUNKS

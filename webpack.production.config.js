@@ -1,6 +1,7 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path')
 module.exports = {
 
@@ -13,7 +14,8 @@ module.exports = {
     plugins: [new HtmlWebpackPlugin({
         template: './public/index.html',
         path: 'index.html'
-    })],
+    }),
+    new MiniCssExtractPlugin()],
     resolve: {
         extensions: ['.js', '.jsx'],
         alias: {
@@ -37,7 +39,7 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader"],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
