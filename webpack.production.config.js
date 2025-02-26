@@ -1,10 +1,10 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const TerserPlugin = require("terser-webpack-plugin");
 const path = require('path')
 module.exports = {
 
-    mode: 'development',
+    mode: 'production',
     entry: './src/components/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -44,5 +44,13 @@ module.exports = {
                 type: 'asset/resource',
             },
         ]
-    }
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                test: /\.js(\?.*)?$/i,
+            }),
+        ],
+    },
 };

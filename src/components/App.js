@@ -3,6 +3,9 @@ import './App.css'
 import myImage1 from '../../public/shiva.jpg'
 
 const App = () => {
+    const handleFunction = () => {
+        console.log("Hello Mike..")
+    }
     return (
         <div className='container'>
             <div id='god-name'>

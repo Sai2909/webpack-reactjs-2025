@@ -70,6 +70,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
     })],
 
     -Terser Plugin
+## npm install terser-webpack-plugin --save-dev
+-is used to removed the unneccesary code in production build
     -Mini Css extract Plugin
     -Define Plugin
 
