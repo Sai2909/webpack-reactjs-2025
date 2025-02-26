@@ -107,8 +107,38 @@ new webpack.DefinePlugin({
         API_URL: JSON.stringify('http://api/prod/v2/graphql'),
     })
 
-    
+
 =>OPTIMIZATION- SPLIT CHUNKS
+
+  splitChunks: {
+            chunkIds: "named",
+            chunks: 'async',
+            minSize: 20000,
+            minRemainingSize: 0,
+            minChunks: 1,
+            maxAsyncRequests: 30,
+            maxInitialRequests: 30,
+            enforceSizeThreshold: 50000,
+            cacheGroups: {
+                defaultVendors: {
+                    name: 'vendor',
+                    chunks: 'all',
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10,
+                    reuseExistingChunk: true,
+                },
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true,
+                },
+            },
+        }
+
+
+
+
+go throw below: https://github.com/PardeepBhasin/webpack-yt-session/blob/main/webpack.production.config.js
 =>SEPERATE CHUNK FOR  SHARED  MODULE
 =>DYNAMIC REPORTS
 =>PERFOMANCE
