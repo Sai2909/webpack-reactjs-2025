@@ -2,10 +2,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const path = require('path')
+const webpack = require('webpack');
+const path = require('path');
 module.exports = {
 
     mode: 'production',
+    devtool: 'source-map',
     entry: './src/components/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -15,7 +17,11 @@ module.exports = {
         template: './public/index.html',
         path: 'index.html'
     }),
-    new MiniCssExtractPlugin()],
+    new MiniCssExtractPlugin(),
+    new webpack.DefinePlugin({
+        API_URL: JSON.stringify('http://api/prod/v2/graphql'),
+    })
+    ],
     resolve: {
         extensions: ['.js', '.jsx'],
         alias: {

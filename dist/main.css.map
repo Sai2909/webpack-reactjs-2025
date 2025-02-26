@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","mappings":"AAAA;IACI,sBAAsB;IACtB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB,C","sources":["webpack://webpack-react-config/./src/components/App.css"],"sourcesContent":[".container {\r\n    color: rgb(16, 15, 15);\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}"],"names":[],"sourceRoot":""}

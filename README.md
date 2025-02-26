@@ -100,6 +100,14 @@ const TerserPlugin = require("terser-webpack-plugin");
 
     -Define Plugin
 
+## npx serve dist
+## devtool:'source-map'
+
+new webpack.DefinePlugin({
+        API_URL: JSON.stringify('http://api/prod/v2/graphql'),
+    })
+
+    
 =>OPTIMIZATION- SPLIT CHUNKS
 =>SEPERATE CHUNK FOR  SHARED  MODULE
 =>DYNAMIC REPORTS

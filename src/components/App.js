@@ -3,6 +3,8 @@ import './App.css'
 import myImage1 from '../../public/shiva.jpg'
 
 const App = () => {
+
+    console.log("api url", API_URL)
     const handleFunction = () => {
         console.log("Hello Mike..")
     }
