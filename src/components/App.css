@@ -1,0 +1,13 @@
+.container {
+    color: rgb(16, 15, 15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.god-name {
+    color: rgb(16, 15, 15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
