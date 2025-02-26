@@ -1,8 +1,6 @@
 import React from 'react'
 import './App.css'
-import myImage from '../../public/fish.jpg'
 import myImage1 from '../../public/shiva.jpg'
-
 
 const App = () => {
     return (
@@ -13,9 +11,6 @@ const App = () => {
                     <img src={myImage1} width={300} height={300} />
                 </div>
             </div>
-
-
-
         </div>
     )
 }
