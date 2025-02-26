@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# https://www.youtube.com/watch?v=yJrcib6ZITw
+
+## Getting Started with Create React App
 
 ## npm init
 create `src` and `public` Folders
@@ -95,7 +97,7 @@ const TerserPlugin = require("terser-webpack-plugin");
       },
     ],
 
-    
+
     -Define Plugin
 
 =>OPTIMIZATION- SPLIT CHUNKS
